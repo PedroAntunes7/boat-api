@@ -26,7 +26,15 @@ class User{
         }
     }
     function delete(){
-        echo "Delete no banco".$this->id;
+        $db = new database();
+        try{
+            $stmt = $db->conn->prepare("DELETE FROM users WHERE id = :id;");
+            $stmt->bindParam(':id', $this->id);
+            $stmt->execute();
+            echo 'Deletado com Sucesso!';
+        }catch(PDOExeption $e) {
+            echo "Error: " . $e->getMessage();
+        }
     }
 }
 ?>
