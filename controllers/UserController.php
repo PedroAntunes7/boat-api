@@ -23,12 +23,12 @@
         }
         else{
             $result['message'] = "404 - Rota da Api Não Encontrada";
-    $response = new Output();
-    $response -> out($result, 404);
+            $response = new Output();
+            $response -> out($result, 404);
         }
     }else{
         $result['message'] = "404 - Rota da Api Não Encontrada";
-    $response = new Output();
-    $response -> out($result, 404);
+        $response = new Output();
+        $response -> out($result, 404);
     }
 ?>

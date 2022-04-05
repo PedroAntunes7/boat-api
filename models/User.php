@@ -20,9 +20,19 @@ class User{
             $stmt->bindParam(':email', $this->email);
             $stmt->bindParam(':pass', $this->pass);
             $stmt->execute();
-            echo 'Cadastrado com sucesso!';
+            $id = $db->conn->lastInsertId();
+
+            $result['message'] = "Cadastrado com sucesso!";
+            $result['user']['id'] = $id;
+            $result['user']['name'] = $this->name;
+            $result['user']['email'] = $this->email;
+            $result['user']['pass'] = $this->pass;
+            $response = new Output();
+            $response->out($result);
         }catch(PDOException $e) {
-            echo "Error: " . $e->getMessage();
+            $result['message'] = "Error new database: " . $e->getMessage();
+            $response = new Output();
+            $response->out($result, 500);
         }
     }
     function delete(){
@@ -34,7 +44,9 @@ class User{
         $stmt->execute();
         echo 'Deletado com sucesso!';
     }catch(PDOException $e) {
-        echo "Error: " . $e->getMessage();
+        $result['message'] = "Error delete User: " . $e->getMessage();
+        $response = new Output();
+        $response->out($result, 500);
     }
   }
 
@@ -49,7 +61,9 @@ class User{
         $stmt->execute();
         echo 'User atualizado com sucesso';
       }catch(PDOException $e) {
-          echo 'Error: '.$e->getMessage();
+        $result['message'] = "Error update User: " . $e->getMessage();
+        $response = new Output();
+        $response->out($result, 500);
       }
   }
   function selectALL(){
@@ -61,7 +75,6 @@ class User{
           
           $response = new Output();
           $response->out($result);
-          header('Content-Type: application/json; charset=utf-8');
       } catch(PDOException $e) {
         $result['message'] = "Error Select All User: " . $e->getMessage();
         $response = new Output();

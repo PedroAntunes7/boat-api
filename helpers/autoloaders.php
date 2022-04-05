@@ -4,9 +4,9 @@ function myLoaders($class_name){
         require 'models/' . $class_name . '.php';
     }
     if(file_exists('helpers/' . $class_name . '.php')){
-    require 'helpers/' . $class_name . '.php';
+        require 'helpers/' . $class_name . '.php';
     }
-}
+}   
 //Automatiza o carregamento dos modelos
 spl_autoload_register('myLoaders');
 
