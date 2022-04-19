@@ -1,0 +1,96 @@
+[
+  {
+    "_id": "4c49255c-02dd-4415-a581-02728a019e35",
+    "colId": "a78b7610-7114-47b0-92ce-907afb1ec163",
+    "containerId": "",
+    "name": "user/select-all",
+    "url": "http://localhost/lp2/api/user/select-all",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-04-19T18:59:24.702Z",
+    "modified": "2022-04-19T18:59:24.702Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "b8c63006-9b92-453a-9b11-6e1844e7936d",
+    "colId": "a78b7610-7114-47b0-92ce-907afb1ec163",
+    "containerId": "",
+    "name": "user/delete",
+    "url": "http://localhost/lp2/api/user/delete",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2022-04-19T19:19:31.933Z",
+    "modified": "2022-04-19T19:19:31.933Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "id",
+          "value": "6"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "9517d99c-2e70-4e09-bfe9-e1fc1d6ae211",
+    "colId": "a78b7610-7114-47b0-92ce-907afb1ec163",
+    "containerId": "",
+    "name": "user/create",
+    "url": "http://localhost/lp2/api/user/create",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2022-04-19T19:22:35.846Z",
+    "modified": "2022-04-19T19:22:35.846Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "name",
+          "value": "Clebinho"
+        },
+        {
+          "name": "email",
+          "value": "clebin123@gmail.com"
+        },
+        {
+          "name": "pass",
+          "value": "255361234"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "71fbfcb0-272e-43fe-8d04-a751d32319b8",
+    "colId": "a78b7610-7114-47b0-92ce-907afb1ec163",
+    "containerId": "",
+    "name": "user/select-by-id",
+    "url": "http://localhost/lp2/api/user/select-by-id",
+    "method": "GET",
+    "sortNum": 40000,
+    "created": "2022-04-19T20:49:15.255Z",
+    "modified": "2022-04-19T20:49:15.255Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "id",
+          "value": "7"
+        }
+      ]
+    },
+    "tests": []
+  }
+]
