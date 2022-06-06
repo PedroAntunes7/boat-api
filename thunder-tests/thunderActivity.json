@@ -4,11 +4,11 @@
     "colId": "history",
     "containerId": "",
     "name": "http://localhost/lp2/api/auth/login",
-    "url": "http://localhost/lp2/api/auth/login",
+    "url": "http://localhost/lp2/api/create/user",
     "method": "POST",
     "sortNum": 0,
     "created": "2022-05-23T17:37:18.304Z",
-    "modified": "2022-05-23T17:37:18.467Z",
+    "modified": "2022-06-06T18:53:39.769Z",
     "headers": [],
     "params": [],
     "body": {
@@ -22,6 +22,10 @@
         {
           "name": "pass",
           "value": "321321"
+        },
+        {
+          "name": "name",
+          "value": "renan"
         }
       ]
     },
