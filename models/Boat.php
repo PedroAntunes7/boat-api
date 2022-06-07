@@ -27,9 +27,8 @@ class Boat{
     function create(){
         $db = new Database();
         try {
-            $stmt = $db->conn->prepare("INSERT INTO boat ($id, $img, $name, $price, $tipo, $estado, $ano_fab, $tamanho, $trip, $local, $comb)
-            VALUES (:id, :img, `:name`, :price, :tipo, :estado, :ano_fab, :tamanho, :trip, `:local`, :comb);");
-            $stmt->bindParam(':id', $this->id);
+            $stmt = $db->conn->prepare("INSERT INTO boat (img, name, price, tipo, estado, ano_fab, tamanho, trip, local, comb)
+            VALUES (:img, :name, :price, :tipo, :estado, :ano_fab, :tamanho, :trip, :local, :comb);");
             $stmt->bindParam(':img', $this->img);
             $stmt->bindParam(':name', $this->name);
             $stmt->bindParam(':price', $this->price);
@@ -65,7 +64,7 @@ class Boat{
     function update(){
         $db = new Database();
         try {
-            $stmt = $db->conn->prepare("UPDATE boat SET img = :img, `name` = `:name`, price = :price, tipo = :tipo, estado = :estado, ano_fab = :ano_fab, tamanho = :tamanho, trip = :trip, local = :local, comb = :comb  WHERE id = :id;");
+            $stmt = $db->conn->prepare("UPDATE boat SET img = :img, name = :name, price = :price, tipo = :tipo, estado = :estado, ano_fab = :ano_fab, tamanho = :tamanho, trip = :trip, local = :local, comb = :comb  WHERE id = :id;");
             $stmt->bindParam(':id', $this->id);
             $stmt->bindParam(':img', $this->img);
             $stmt->bindParam(':name', $this->name);

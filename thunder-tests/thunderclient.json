@@ -77,5 +77,84 @@
       ]
     },
     "tests": []
+  },
+  {
+    "_id": "e2aa12cf-076e-4f66-a22f-de92b097b765",
+    "colId": "39fa9d5c-4622-4b00-9063-d4e2880e1fde",
+    "containerId": "",
+    "name": "Select All ",
+    "url": "http://localhost/boat-api/api/boat/select-all",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-06-07T19:28:00.140Z",
+    "modified": "2022-06-07T19:28:00.140Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "8de75624-c6b2-4c93-9199-06af86d748b7",
+    "colId": "39fa9d5c-4622-4b00-9063-d4e2880e1fde",
+    "containerId": "",
+    "name": "Create",
+    "url": "http://localhost/boat-api/api/boat/create",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2022-06-07T19:32:22.806Z",
+    "modified": "2022-06-07T19:32:22.806Z",
+    "headers": [
+      {
+        "name": "Access-Token",
+        "value": "sadasd"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "img",
+          "value": "https://www.bombarco.com.br/public/embarcacoes/6127ea1eb753cF0TO01.jpg"
+        },
+        {
+          "name": "name",
+          "value": "Barco Pesqueiro"
+        },
+        {
+          "name": "price",
+          "value": "25,000.00 R$"
+        },
+        {
+          "name": "tipo",
+          "value": "Fibra"
+        },
+        {
+          "name": "estado",
+          "value": "Usado"
+        },
+        {
+          "name": "ano_fab",
+          "value": "2013"
+        },
+        {
+          "name": "tamanho",
+          "value": "22 Pés"
+        },
+        {
+          "name": "trip",
+          "value": "Dia: 6 | Noite: 0"
+        },
+        {
+          "name": "local",
+          "value": "Angra dos Reis-Rj"
+        },
+        {
+          "name": "comb",
+          "value": "Gasolina"
+        }
+      ]
+    },
+    "tests": []
   }
 ]

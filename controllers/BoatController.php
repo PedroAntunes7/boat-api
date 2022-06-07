@@ -48,7 +48,7 @@ class BoatController{
         $user_session = $auth->allowedRole('admin');
 
         $id = $_POST['id'];
-        $boat = new boat($id, null, null, null);
+        $boat = new boat($id, null, null, null, null, null, null, null, null, null, null);
         $boat->delete();
         $result['message'] = "Barco deletado com sucesso!";
         $result['boat']['id'] = $id;
@@ -85,8 +85,8 @@ class BoatController{
     function selectAll(){
         $response = new Output();
         $response->allowedMethod('GET');
-        $boat = new Boat(null, null, null, null);
-        $result = $Boat->selectAll();
+        $boat = new Boat(null, null, null, null, null, null, null, null, null, null, null);
+        $result = $boat->selectAll();
         $response->out($result);
     }
 
@@ -94,7 +94,7 @@ class BoatController{
         $response = new Output();
         $response->allowedMethod('GET');
         $id = $_GET['id'];
-        $boat = new Boat($id, null, null, null);
+        $boat = new Boat($id, null, null, null, null, null, null, null, null, null, null);
         $result = $boat->selectById();
         $response->out($result);
     }
