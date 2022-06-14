@@ -18,11 +18,11 @@
     "colId": "history",
     "containerId": "",
     "name": "http://localhost/lp2/api/product/create",
-    "url": "http://localhost/boat-api/api/boat/create",
-    "method": "POST",
+    "url": "http://localhost/boat-api/api/praia/SelectById",
+    "method": "GET",
     "sortNum": 0,
     "created": "2022-05-24T18:08:17.990Z",
-    "modified": "2022-06-07T19:43:42.489Z",
+    "modified": "2022-06-14T19:52:13.546Z",
     "headers": [
       {
         "name": "Access-Token",
@@ -35,44 +35,90 @@
       "raw": "",
       "form": [
         {
-          "name": "img",
-          "value": "https://www.bombarco.com.br/public/embarcacoes/6127ea1eb753cF0TO01.jpg"
+          "name": "id",
+          "value": "1"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "2495aa0a-a5f0-425b-8242-3d4cfd12351c",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost/boat-api/api/praia/create",
+    "url": "http://localhost/boat-api/api/praia/create",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-06-14T18:42:43.018Z",
+    "modified": "2022-06-14T19:41:57.268Z",
+    "headers": [
+      {
+        "name": "Access-Token",
+        "value": "5e1afe787db7ed462895aca5badc7315"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "foto",
+          "value": "rpwcvocrkwcrcprkcrkopko"
         },
         {
-          "name": "name",
-          "value": "Barco Pesqueiro"
+          "name": "nome",
+          "value": "testeeeee"
         },
         {
-          "name": "price",
-          "value": "25,000.00 R$"
-        },
-        {
-          "name": "tipo",
-          "value": "Fibra"
-        },
-        {
-          "name": "estado",
-          "value": "Usado"
-        },
-        {
-          "name": "ano_fab",
-          "value": "2013"
-        },
-        {
-          "name": "tamanho",
-          "value": "22 Pés"
-        },
-        {
-          "name": "trip",
-          "value": "Dia: 6 | Noite: 0"
+          "name": "descricao",
+          "value": "nananannananananannanananan"
         },
         {
           "name": "local",
-          "value": "Angra dos Reis-Rj"
+          "value": "oioioiooioioioi"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "0d17277b-5a86-46d9-ad0f-6251ba996026",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost/boat-api/api/praia/create",
+    "url": "http://localhost/boat-api/api/praia/create",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-06-14T19:29:02.126Z",
+    "modified": "2022-06-14T19:29:02.140Z",
+    "headers": [
+      {
+        "name": "Access-Token",
+        "value": "5e1afe787db7ed462895aca5badc7315"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "foto",
+          "value": "rpwcvocrkwcrcprkcrkopko"
         },
         {
-          "name": "comb",
-          "value": "Gasolina"
+          "name": "nome",
+          "value": "testeeeee"
+        },
+        {
+          "name": "descricao",
+          "value": "nananannananananannanananan"
+        },
+        {
+          "name": "local",
+          "value": "oioioiooioioioi"
         }
       ]
     },

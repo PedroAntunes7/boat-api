@@ -101,11 +101,11 @@
     "method": "POST",
     "sortNum": 20000,
     "created": "2022-06-07T19:32:22.806Z",
-    "modified": "2022-06-07T19:32:22.806Z",
+    "modified": "2022-06-09T18:38:18.527Z",
     "headers": [
       {
         "name": "Access-Token",
-        "value": "sadasd"
+        "value": "5e1afe787db7ed462895aca5badc7315"
       }
     ],
     "params": [],
@@ -114,20 +114,16 @@
       "raw": "",
       "form": [
         {
-          "name": "img",
-          "value": "https://www.bombarco.com.br/public/embarcacoes/6127ea1eb753cF0TO01.jpg"
-        },
-        {
           "name": "name",
-          "value": "Barco Pesqueiro"
+          "value": "FS Yachts 215"
         },
         {
           "name": "price",
-          "value": "25,000.00 R$"
+          "value": "350,000.00R$"
         },
         {
           "name": "tipo",
-          "value": "Fibra"
+          "value": "Cabinada"
         },
         {
           "name": "estado",
@@ -135,23 +131,68 @@
         },
         {
           "name": "ano_fab",
-          "value": "2013"
+          "value": "2018"
         },
         {
           "name": "tamanho",
-          "value": "22 Pés"
+          "value": "21 Pés"
         },
         {
           "name": "trip",
-          "value": "Dia: 6 | Noite: 0"
+          "value": "Dia: 8 | Noite: 2"
         },
         {
           "name": "local",
-          "value": "Angra dos Reis-Rj"
+          "value": "Itajai-Sc"
         },
         {
           "name": "comb",
           "value": "Gasolina"
+        },
+        {
+          "name": "img",
+          "value": "https://www.bombarco.com.br/public/embarcacoes/628fb117030253dd29217-81a1-4945-8a63-1489523fc0e0.jpg"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "9f547ce1-6bec-4307-bc64-08fa3748ce0a",
+    "colId": "39fa9d5c-4622-4b00-9063-d4e2880e1fde",
+    "containerId": "",
+    "name": "Praia Create",
+    "url": "http://localhost/boat-api/api/praia/create",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2022-06-14T19:44:58.148Z",
+    "modified": "2022-06-14T19:44:58.148Z",
+    "headers": [
+      {
+        "name": "Access-Token",
+        "value": "5e1afe787db7ed462895aca5badc7315"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "foto",
+          "value": "rpwcvocrkwcrcprkcrkopko"
+        },
+        {
+          "name": "nome",
+          "value": "testeeeee"
+        },
+        {
+          "name": "descricao",
+          "value": "nananannananananannanananan"
+        },
+        {
+          "name": "local",
+          "value": "oioioiooioioioi"
         }
       ]
     },

@@ -64,7 +64,7 @@ class Boat{
     function update(){
         $db = new Database();
         try {
-            $stmt = $db->conn->prepare("UPDATE boat SET img = :img, name = :name, price = :price, tipo = :tipo, estado = :estado, ano_fab = :ano_fab, tamanho = :tamanho, trip = :trip, local = :local, comb = :comb  WHERE id = :id;");
+            $stmt = $db->conn->prepare("UPDATE boat SET img = :img, name = :name, price = :price, tipo = :tipo, estado = :estado, ano_fab = :ano_fab, tamanho = :tamanho, trip = :trip, local = :local, comb = :comb WHERE id = :id;");
             $stmt->bindParam(':id', $this->id);
             $stmt->bindParam(':img', $this->img);
             $stmt->bindParam(':name', $this->name);
@@ -88,6 +88,20 @@ class Boat{
         $db = new Database();
         try {
             $stmt = $db->conn->prepare("SELECT * FROM boat;");
+            $stmt->execute();
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+        }catch(PDOException $e) {
+            $result['message'] = "Error Select All Boats: " . $e->getMessage();
+            $response = new Output();
+            $response->out($result, 500);
+        }
+    }
+
+    function destaques(){
+        $db = new Database();
+        try {
+            $stmt = $db->conn->prepare("SELECT * FROM boat WHERE destaques = 1 ;");
             $stmt->execute();
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
             return $result;

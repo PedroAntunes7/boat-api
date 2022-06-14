@@ -22,7 +22,7 @@ class BoatController{
 
         
         //Processamento ou Persistencia
-        $boat = new Boat(null, $img, $name, $price, $tipo, $estado, $ano_fab, $tamanho, $trip, $local, $comb );
+        $boat = new Boat(null, $img, $name, $price, $tipo, $estado, $ano_fab, $tamanho, $trip, $local, $comb);
         $id = $boat->create();
         //Saída
         $result['message'] = "Barco Cadastrado com sucesso!";
@@ -48,7 +48,7 @@ class BoatController{
         $user_session = $auth->allowedRole('admin');
 
         $id = $_POST['id'];
-        $boat = new boat($id, null, null, null, null, null, null, null, null, null, null);
+        $boat = new Boat($id, null, null, null, null, null, null, null, null, null, null);
         $boat->delete();
         $result['message'] = "Barco deletado com sucesso!";
         $result['boat']['id'] = $id;
@@ -73,7 +73,7 @@ class BoatController{
         $trip = $_POST['trip'];
         $local = $_POST['local'];
         $comb = $_POST['comb'];
-        $boat = new Boat($id, $img, $name, $price, $tipo, $estado, $ano_fab, $tamanho, $trip, $local, $comb );
+        $boat = new Boat($id, $img, $name, $price, $tipo, $estado, $ano_fab, $tamanho, $trip, $local, $comb);
         $boat->update();
         $result['message'] = "Barco atualizado com sucesso!";
         $result['boat']['id'] = $id;
@@ -90,11 +90,19 @@ class BoatController{
         $response->out($result);
     }
 
+    function destaques(){
+        $response = new Output();
+        $response->allowedMethod('GET');
+        $boat = new Boat(null, null, null, null, null, null, null, null, null, null, null);
+        $result = $boat->selectAll();
+        $response->out($result);
+    }
+
     function selectById(){
         $response = new Output();
         $response->allowedMethod('GET');
         $id = $_GET['id'];
-        $boat = new Boat($id, null, null, null, null, null, null, null, null, null, null);
+        $boat = new Boat($id, null, null, null, null, null, null, null, null, null, null,);
         $result = $boat->selectById();
         $response->out($result);
     }
