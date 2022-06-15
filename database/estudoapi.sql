@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 23-Maio-2022 às 21:31
+-- Tempo de geração: 15-Jun-2022 às 20:59
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.0.13
 
@@ -20,6 +20,99 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `estudoapi`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `boat`
+--
+
+CREATE TABLE `boat` (
+  `id` int(11) NOT NULL,
+  `img` varchar(400) NOT NULL,
+  `name` varchar(90) NOT NULL,
+  `price` varchar(40) NOT NULL,
+  `tipo` varchar(50) NOT NULL,
+  `estado` varchar(50) NOT NULL,
+  `ano_fab` int(4) NOT NULL,
+  `tamanho` varchar(40) NOT NULL,
+  `trip` varchar(50) NOT NULL,
+  `local` varchar(60) NOT NULL,
+  `comb` varchar(50) NOT NULL,
+  `destaques` int(1) NOT NULL DEFAULT 0 COMMENT '0 Or 1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `boat`
+--
+
+INSERT INTO `boat` (`id`, `img`, `name`, `price`, `tipo`, `estado`, `ano_fab`, `tamanho`, `trip`, `local`, `comb`, `destaques`) VALUES
+(2, 'https://paraty.com.br/wp-content/uploads/2022/01/barco-jessica-III-02-d.jpg', 'Barco', '38,700.00 R$', 'Cabinado', 'Usado', 2010, '12 pés', '7 Dia | 5 Noite', 'Ubatuba-Sp', 'Gasolina', 1),
+(3, 'https://paraty.com.br/wp-content/uploads/2022/01/barco-jessica-III-02-d.jpg', 'Barco', '38,700.00 R$', 'Cabinado', 'Usado', 2010, '12 pés', '7 Dia | 5 Noite', 'Ubatuba-Sp', 'Gasolina', 0),
+(4, 'https://www.bombarco.com.br/public/embarcacoes/6127ea1eb753cF0TO01.jpg', 'Barco Pesqueiro', '25,000.00 R$', 'Fibra', 'Usado', 2013, '22 Pés', 'Dia: 6 | Noite: 0', 'Angra dos Reis-Rj', 'Gasolina', 1),
+(5, 'https://www.bombarco.com.br/public/embarcacoes/628fb117030253dd29217-81a1-4945-8a63-1489523fc0e0.jpg', 'FS Yachts 215', '350,000.00R$', 'Cabinada', 'Usado', 2018, '21 Pés', 'Dia: 8 | Noite: 2', 'Itajai-Sc', 'Gasolina', 0),
+(6, 'https://www.bombarco.com.br/public/embarcacoes/628fb117030253dd29217-81a1-4945-8a63-1489523fc0e0.jpg', 'FS Yachts 215', '350,000.00R$', 'Cabinada', 'Usado', 2018, '21 Pés', 'Dia: 8 | Noite: 2', 'Itajai-Sc', 'Gasolina', 0),
+(7, 'https://www.bombarco.com.br/public/embarcacoes/628fb117030253dd29217-81a1-4945-8a63-1489523fc0e0.jpg', 'FS Yachts 215', '350,000.00R$', 'Cabinada', 'Usado', 2018, '21 Pés', 'Dia: 8 | Noite: 2', 'Itajai-Sc', 'Gasolina', 1),
+(8, 'https://www.bombarco.com.br/public/embarcacoes/628fb117030253dd29217-81a1-4945-8a63-1489523fc0e0.jpg', 'FS Yachts 215', '350,000.00R$', 'Cabinada', 'Usado', 2018, '21 Pés', 'Dia: 8 | Noite: 2', 'Itajai-Sc', 'Gasolina', 0),
+(9, 'https://www.bombarco.com.br/public/embarcacoes/628fb117030253dd29217-81a1-4945-8a63-1489523fc0e0.jpg', 'FS Yachts 215', '350,000.00R$', 'Cabinada', 'Usado', 2018, '21 Pés', 'Dia: 8 | Noite: 2', 'Itajai-Sc', 'Gasolina', 0),
+(10, 'https://www.bombarco.com.br/public/embarcacoes/628fb117030253dd29217-81a1-4945-8a63-1489523fc0e0.jpg', 'FS Yachts 215', '350,000.00R$', 'Cabinada', 'Usado', 2018, '21 Pés', 'Dia: 8 | Noite: 2', 'Itajai-Sc', 'Gasolina', 0),
+(11, 'https://www.bombarco.com.br/public/embarcacoes/6127ea1eb753cF0TO01.jpg', 'Barco Pesqueiro', '25,000.00 R$', 'Fibra', 'Usado', 2013, '22 Pés', 'Dia: 6 | Noite: 0', 'Angra dos Reis-Rj', 'Gasolina', 0),
+(12, 'https://www.bombarco.com.br/public/embarcacoes/6127ea1eb753cF0TO01.jpg', 'Barco Pesqueiro', '25,000.00 R$', 'Fibra', 'Usado', 2013, '22 Pés', 'Dia: 6 | Noite: 0', 'Angra dos Reis-Rj', 'Gasolina', 0),
+(13, 'https://www.bombarco.com.br/public/embarcacoes/628fb117030253dd29217-81a1-4945-8a63-1489523fc0e0.jpg', 'FS Yachts 215', '350,000.00R$', 'Cabinada', 'Usado', 2018, '21 Pés', 'Dia: 8 | Noite: 2', 'Itajai-Sc', 'Gasolina', 0),
+(14, 'kjhkjhkjh', 'khjkhjkhjkhk', 'jkhjkhkhk', 'jkhjkhjkhkj', 'kjhkjhjkh', 0, 'jhoiioju', 'huihiuhiuh', 'uihuihihhiu', 'uihuihiuhih', 0),
+(15, 'kjhkjhkjh', 'khjkhjkhjkhk', 'jkhjkhkhk', 'jkhjkhjkhkj', 'kjhkjhjkh', 0, 'jhoiioju', 'huihiuhiuh', 'uihuihihhiu', 'uihuihiuhih', 0),
+(16, 'iojoijiojoi', 'ijoj', 'ijj', 'jioj', 'ijojioj', 2010, 'jhoiioju', 'huihiuhiuh', 'uihuihihhiu', 'uihuihiuhih', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `jet`
+--
+
+CREATE TABLE `jet` (
+  `id` int(200) NOT NULL,
+  `img` varchar(400) NOT NULL,
+  `name` varchar(90) NOT NULL,
+  `price` varchar(40) NOT NULL,
+  `tipo` varchar(50) NOT NULL,
+  `estado` varchar(50) NOT NULL,
+  `ano_fab` int(4) NOT NULL,
+  `local` varchar(60) NOT NULL,
+  `comb` varchar(50) NOT NULL,
+  `destaques` int(1) NOT NULL DEFAULT 0 COMMENT '0 or 1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `jet`
+--
+
+INSERT INTO `jet` (`id`, `img`, `name`, `price`, `tipo`, `estado`, `ano_fab`, `local`, `comb`, `destaques`) VALUES
+(1, 'kljohhjhjkh', 'khuihuihiuhi', 'uhuihukhkj', 'jkhkjhklh', 'jkhjkhk', 989, 'uhlhjkhkjh', 'jkhklhljkh', 1),
+(2, 'kjhlgkjhg', 'jhkgjkhjkh', 'gkjhg', 'jhkj', 'jhkgjh', 4322, 'klçjjkçlj', 'lkjjklçjç', 0),
+(3, 'kljohhjhjkh', 'khuihuihiuhi', 'uhuihukhkj', 'jkhkjhklh', 'jkhjkhk', 989, 'uhlhjkhkjh', 'jkhklhljkh', 1),
+(4, 'kjhlgkjhg', 'jhkgjkhjkh', 'gkjhg', 'jhkj', 'jhkgjh', 4322, 'klçjjkçlj', 'lkjjklçjç', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `praia`
+--
+
+CREATE TABLE `praia` (
+  `id` int(11) NOT NULL,
+  `foto` varchar(600) NOT NULL,
+  `nome` varchar(60) NOT NULL,
+  `local` varchar(60) NOT NULL,
+  `descricao` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `praia`
+--
+
+INSERT INTO `praia` (`id`, `foto`, `nome`, `local`, `descricao`) VALUES
+(1, 'iojoijoijiojojiojoijo', 'iojiojijijojojj', 'ygopiopioioio', 'iouiouiooijoijuuhuuu'),
+(3, 'rpwcvocrkwcrcprkcrkopko', 'testeeeee', 'oioioiooioioioi', 'nananannananananannanananan');
 
 -- --------------------------------------------------------
 
@@ -86,11 +179,30 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `name`, `email`, `pass`, `roles`) VALUES
 (11, 'Pedro', 'pedro@gmail.com', '601f1889667efaebb33b8c12572835da3f027f78', 'client'),
 (13, 'Renan', 'renancavichi@gmail.com', 'bc53b5813c49642762c251319405523e399e6176', 'admin'),
-(14, 'Maria', 'maria@gmail.com', 'bc53b5813c49642762c251319405523e399e6176', 'client');
+(14, 'Maria', 'maria@gmail.com', 'bc53b5813c49642762c251319405523e399e6176', 'client'),
+(15, 'arthur', 'arthur@gmail.com', 'arthur', 'admin');
 
 --
 -- Índices para tabelas despejadas
 --
+
+--
+-- Índices para tabela `boat`
+--
+ALTER TABLE `boat`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Índices para tabela `jet`
+--
+ALTER TABLE `jet`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Índices para tabela `praia`
+--
+ALTER TABLE `praia`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Índices para tabela `products`
@@ -116,6 +228,24 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT de tabela `boat`
+--
+ALTER TABLE `boat`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT de tabela `jet`
+--
+ALTER TABLE `jet`
+  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT de tabela `praia`
+--
+ALTER TABLE `praia`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT de tabela `products`
 --
 ALTER TABLE `products`
@@ -131,7 +261,7 @@ ALTER TABLE `sessions`
 -- AUTO_INCREMENT de tabela `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Restrições para despejos de tabelas

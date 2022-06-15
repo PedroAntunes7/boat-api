@@ -94,7 +94,7 @@ class BoatController{
         $response = new Output();
         $response->allowedMethod('GET');
         $boat = new Boat(null, null, null, null, null, null, null, null, null, null, null);
-        $result = $boat->selectAll();
+        $result = $boat->destaques();
         $response->out($result);
     }
 

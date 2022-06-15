@@ -101,7 +101,7 @@ class Boat{
     function destaques(){
         $db = new Database();
         try {
-            $stmt = $db->conn->prepare("SELECT * FROM boat WHERE destaques = 1 ;");
+            $stmt = $db->conn->prepare("SELECT * FROM boat WHERE destaques = 1");
             $stmt->execute();
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
             return $result;

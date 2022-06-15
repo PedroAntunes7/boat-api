@@ -123,5 +123,33 @@
       ]
     },
     "tests": []
+  },
+  {
+    "_id": "3459cba5-a5ca-442d-9456-bf1c7810e4b6",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost/boat-api/api/boat/destaques",
+    "url": "http://localhost/boat-api/api/boat/destaques",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-06-15T17:57:36.715Z",
+    "modified": "2022-06-15T18:00:45.740Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "f370b7d6-972b-406f-bb2b-a811e31666da",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost/boat-api/api/jet/select-all",
+    "url": "http://localhost/boat-api/api/jet/select-all",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-06-15T18:46:14.361Z",
+    "modified": "2022-06-15T18:46:24.239Z",
+    "headers": [],
+    "params": [],
+    "tests": []
   }
 ]
