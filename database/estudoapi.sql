@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 15-Jun-2022 às 20:59
+-- Tempo de geração: 20-Jun-2022 às 19:22
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.0.13
 
@@ -138,6 +138,34 @@ INSERT INTO `products` (`id`, `photo`, `title`, `price`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `proposta`
+--
+
+CREATE TABLE `proposta` (
+  `id` int(11) NOT NULL,
+  `name` varchar(150) NOT NULL,
+  `email` varchar(150) NOT NULL,
+  `telefone` varchar(25) NOT NULL,
+  `proposta` varchar(400) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `proposta`
+--
+
+INSERT INTO `proposta` (`id`, `name`, `email`, `telefone`, `proposta`) VALUES
+(1, 'JUJOJIOJOJIOJIO', '', 'IOJIOJIOJIOJOIJ', 'IOJIOJIOJIOJIOJIOJOI'),
+(2, 'IOJIOJ', '', 'IOJIOJIO', 'OJIOJIOJO'),
+(3, 'JUJOJIOJOJIOJIO', '', 'IOJIOJIOJIOJOIJ', 'IOJIOJIOJIOJIOJIOJOI'),
+(4, 'IOJIOJ', '', 'IOJIOJIO', 'OJIOJIOJO'),
+(5, 'pedro', 'pedro@gmail.com', '0000-0000', 'uhuguftfrdedtesresawaryudydurdrudrdrdrddyd'),
+(6, 'pedro', 'pedro@gmail.com', '0000-0000', 'uhuguftfrdedtesresawaryudydurdrudrdrdrddyd'),
+(7, 'pedro', 'pedro@gmail.com', '0000-0000', 'uhuguftfrdedtesresawaryudydurdrudrdrdrddyd'),
+(8, 'pedro', 'pedro@gmail.com', '0000-0000', 'uhuguftfrdedtesresawaryudydurdrudrdrdrddyd');
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `sessions`
 --
 
@@ -211,6 +239,12 @@ ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Índices para tabela `proposta`
+--
+ALTER TABLE `proposta`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Índices para tabela `sessions`
 --
 ALTER TABLE `sessions`
@@ -250,6 +284,12 @@ ALTER TABLE `praia`
 --
 ALTER TABLE `products`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de tabela `proposta`
+--
+ALTER TABLE `proposta`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de tabela `sessions`

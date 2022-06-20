@@ -10,20 +10,20 @@ class PropostaController{
         $user_session = $auth->allowedRole('admin');
 
         //Entradas
-        $nome = $_POST['nome'];
+        $name = $_POST['name'];
         $email = $_POST['email'];
         $telefone = $_POST['telefone'];
-        $proposta = $_POST['proposta']
+        $proposta = $_POST['proposta'];
 
 
         
         //Processamento ou Persistencia
-        $proposta = new Proposta(null, $nome, $email, $telefone, $proposta);
+        $proposta = new Proposta(null, $name, $email, $telefone, $proposta);
         $id = $proposta->create();
         //Saída
         $result['message'] = "Proposta Cadastrada com sucesso!";
         $result['proposta']['id'] = $id;
-        $result['proposta']['nome'] = $nome;
+        $result['proposta']['name'] = $name;
         $result['proposta']['email'] = $email;
         $result['proposta']['telefone'] = $telefone;
         $result['proposta']['proposta'] = $proposta;
@@ -38,7 +38,7 @@ class PropostaController{
         $user_session = $auth->allowedRole('admin');
 
         $id = $_POST['id'];
-        $proposta = new Proposta($id, null, null, null, null);
+        $proposta = new Proposta ($id, null, null, null, null);
         $proposta->delete();
         $result['message'] = "Proposta deletada com sucesso!";
         $result['proposta']['id'] = $id;
@@ -53,15 +53,15 @@ class PropostaController{
         $user_session = $auth->allowedRole('admin');
 
         $id = $_POST['id'];
-        $nome = $_POST['nome'];
+        $name = $_POST['name'];
         $email = $_POST['email'];
         $telefone = $_POST['telefone'];
         $proposta = $_POST['proposta'];;
-        $proposta = new Proposta($id, $nome, $email, $telefone, $proposta);
+        $proposta = new Proposta($id, $name, $email, $telefone, $proposta);
         $proposta->update();
         $result['message'] = "Proposta atualizada com sucesso!";
         $result['proposta']['id'] = $id;
-        $result['proposta']['nome'] = $nome;
+        $result['proposta']['name'] = $name;
         $result['proposta']['email'] = $email;
         $result['proposta']['telefone'] = $telefone;
         $result['proposta']['proposta'] = $proposta;

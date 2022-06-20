@@ -1,14 +1,14 @@
 <?php 
 class Proposta{
     public $id;
-    public $nome;
+    public $name;
     public $email;
     public $telefone;
     public $proposta;
 
-    function __construct($id, $nome, $email, $telefone, $proposta) {
+    function __construct($id, $name, $email, $telefone, $proposta) {
         $this->id = $id;
-        $this->nome = $nome;
+        $this->name = $name;
         $this->email = $email;
         $this->telefone = $telefone;
         $this->proposta = $proposta;
@@ -17,9 +17,9 @@ class Proposta{
     function create(){
         $db = new Database();
         try {
-            $stmt = $db->conn->prepare("INSERT INTO proposta (nome, email, telefone, proposta)
-            VALUES (:nome, :email, :telefone, :proposta);");
-            $stmt->bindParam(':nome', $this->nome);
+            $stmt = $db->conn->prepare("INSERT INTO proposta (null, name, email, telefone, proposta)
+            VALUES (:name, :email, :telefone, :proposta);");
+            $stmt->bindParam(':name', $this->name);
             $stmt->bindParam(':email', $this->email);
             $stmt->bindParam(':telefone', $this->telefone);
             $stmt->bindParam(':proposta', $this->proposta);
@@ -38,7 +38,7 @@ class Proposta{
             $stmt = $db->conn->prepare("DELETE FROM proposta WHERE id = :id;");
             $stmt->bindParam(':id', $this->id);
             $stmt->execute();
-            return $stmt->rowCount();
+            return true;
         }catch(PDOException $e) {
             $result['message'] = "Error Delete Proposta: " . $e->getMessage();
             $response = new Output();
@@ -48,9 +48,9 @@ class Proposta{
     function update(){
         $db = new Database();
         try {
-            $stmt = $db->conn->prepare("UPDATE proposta SET nome = :nome, email = :email, telefone = :telefone, proposta = :proposta WHERE id = :id;");
+            $stmt = $db->conn->prepare("UPDATE proposta SET name = :name, email = :email, telefone = :telefone, proposta = :proposta WHERE id = :id;");
             $stmt->bindParam(':id', $this->id);
-            $stmt->bindParam(':nome', $this->nome);
+            $stmt->bindParam(':name', $this->name);
             $stmt->bindParam(':email', $this->email);
             $stmt->bindParam(':telefone', $this->telefone);
             $stmt->bindParam(':proposta', $this->proposta);
