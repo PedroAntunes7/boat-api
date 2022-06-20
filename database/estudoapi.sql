@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 20-Jun-2022 às 19:22
+-- Tempo de geração: 20-Jun-2022 às 22:45
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.0.13
 
@@ -111,8 +111,7 @@ CREATE TABLE `praia` (
 --
 
 INSERT INTO `praia` (`id`, `foto`, `nome`, `local`, `descricao`) VALUES
-(1, 'iojoijoijiojojiojoijo', 'iojiojijijojojj', 'ygopiopioioio', 'iouiouiooijoijuuhuuu'),
-(3, 'rpwcvocrkwcrcprkcrkopko', 'testeeeee', 'oioioiooioioioi', 'nananannananananannanananan');
+(1, 'iojoijoijiojojiojoijo', 'iojiojijijojojj', 'ygopiopioioio', 'iouiouiooijoijuuhuuu');
 
 -- --------------------------------------------------------
 
@@ -134,34 +133,6 @@ CREATE TABLE `products` (
 INSERT INTO `products` (`id`, `photo`, `title`, `price`) VALUES
 (1, 'https://marcasdeprodutos.com.br/wp-content/uploads/2021/05/desktop-computer-500x500-1.jpg', 'PC Gamer Pro 7 Core', 'R$ 9.800,00'),
 (2, 'https://marcasdeprodutos.com.br/wp-content/uploads/2021/05/desktop-computer-500x500-1.jpg', 'PC Gamer Pro 7 Core', 'R$ 9.800,00');
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `proposta`
---
-
-CREATE TABLE `proposta` (
-  `id` int(11) NOT NULL,
-  `name` varchar(150) NOT NULL,
-  `email` varchar(150) NOT NULL,
-  `telefone` varchar(25) NOT NULL,
-  `proposta` varchar(400) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Extraindo dados da tabela `proposta`
---
-
-INSERT INTO `proposta` (`id`, `name`, `email`, `telefone`, `proposta`) VALUES
-(1, 'JUJOJIOJOJIOJIO', '', 'IOJIOJIOJIOJOIJ', 'IOJIOJIOJIOJIOJIOJOI'),
-(2, 'IOJIOJ', '', 'IOJIOJIO', 'OJIOJIOJO'),
-(3, 'JUJOJIOJOJIOJIO', '', 'IOJIOJIOJIOJOIJ', 'IOJIOJIOJIOJIOJIOJOI'),
-(4, 'IOJIOJ', '', 'IOJIOJIO', 'OJIOJIOJO'),
-(5, 'pedro', 'pedro@gmail.com', '0000-0000', 'uhuguftfrdedtesresawaryudydurdrudrdrdrddyd'),
-(6, 'pedro', 'pedro@gmail.com', '0000-0000', 'uhuguftfrdedtesresawaryudydurdrudrdrdrddyd'),
-(7, 'pedro', 'pedro@gmail.com', '0000-0000', 'uhuguftfrdedtesresawaryudydurdrudrdrdrddyd'),
-(8, 'pedro', 'pedro@gmail.com', '0000-0000', 'uhuguftfrdedtesresawaryudydurdrudrdrdrddyd');
 
 -- --------------------------------------------------------
 
@@ -239,12 +210,6 @@ ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `proposta`
---
-ALTER TABLE `proposta`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Índices para tabela `sessions`
 --
 ALTER TABLE `sessions`
@@ -284,12 +249,6 @@ ALTER TABLE `praia`
 --
 ALTER TABLE `products`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT de tabela `proposta`
---
-ALTER TABLE `proposta`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de tabela `sessions`
