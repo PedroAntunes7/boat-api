@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 20-Jun-2022 às 22:45
+-- Tempo de geração: 21-Jun-2022 às 22:51
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.0.13
 
@@ -47,8 +47,6 @@ CREATE TABLE `boat` (
 --
 
 INSERT INTO `boat` (`id`, `img`, `name`, `price`, `tipo`, `estado`, `ano_fab`, `tamanho`, `trip`, `local`, `comb`, `destaques`) VALUES
-(2, 'https://paraty.com.br/wp-content/uploads/2022/01/barco-jessica-III-02-d.jpg', 'Barco', '38,700.00 R$', 'Cabinado', 'Usado', 2010, '12 pés', '7 Dia | 5 Noite', 'Ubatuba-Sp', 'Gasolina', 1),
-(3, 'https://paraty.com.br/wp-content/uploads/2022/01/barco-jessica-III-02-d.jpg', 'Barco', '38,700.00 R$', 'Cabinado', 'Usado', 2010, '12 pés', '7 Dia | 5 Noite', 'Ubatuba-Sp', 'Gasolina', 0),
 (4, 'https://www.bombarco.com.br/public/embarcacoes/6127ea1eb753cF0TO01.jpg', 'Barco Pesqueiro', '25,000.00 R$', 'Fibra', 'Usado', 2013, '22 Pés', 'Dia: 6 | Noite: 0', 'Angra dos Reis-Rj', 'Gasolina', 1),
 (5, 'https://www.bombarco.com.br/public/embarcacoes/628fb117030253dd29217-81a1-4945-8a63-1489523fc0e0.jpg', 'FS Yachts 215', '350,000.00R$', 'Cabinada', 'Usado', 2018, '21 Pés', 'Dia: 8 | Noite: 2', 'Itajai-Sc', 'Gasolina', 0),
 (6, 'https://www.bombarco.com.br/public/embarcacoes/628fb117030253dd29217-81a1-4945-8a63-1489523fc0e0.jpg', 'FS Yachts 215', '350,000.00R$', 'Cabinada', 'Usado', 2018, '21 Pés', 'Dia: 8 | Noite: 2', 'Itajai-Sc', 'Gasolina', 0),
@@ -60,8 +58,7 @@ INSERT INTO `boat` (`id`, `img`, `name`, `price`, `tipo`, `estado`, `ano_fab`, `
 (12, 'https://www.bombarco.com.br/public/embarcacoes/6127ea1eb753cF0TO01.jpg', 'Barco Pesqueiro', '25,000.00 R$', 'Fibra', 'Usado', 2013, '22 Pés', 'Dia: 6 | Noite: 0', 'Angra dos Reis-Rj', 'Gasolina', 0),
 (13, 'https://www.bombarco.com.br/public/embarcacoes/628fb117030253dd29217-81a1-4945-8a63-1489523fc0e0.jpg', 'FS Yachts 215', '350,000.00R$', 'Cabinada', 'Usado', 2018, '21 Pés', 'Dia: 8 | Noite: 2', 'Itajai-Sc', 'Gasolina', 0),
 (14, 'kjhkjhkjh', 'khjkhjkhjkhk', 'jkhjkhkhk', 'jkhjkhjkhkj', 'kjhkjhjkh', 0, 'jhoiioju', 'huihiuhiuh', 'uihuihihhiu', 'uihuihiuhih', 0),
-(15, 'kjhkjhkjh', 'khjkhjkhjkhk', 'jkhjkhkhk', 'jkhjkhjkhkj', 'kjhkjhjkh', 0, 'jhoiioju', 'huihiuhiuh', 'uihuihihhiu', 'uihuihiuhih', 0),
-(16, 'iojoijiojoi', 'ijoj', 'ijj', 'jioj', 'ijojioj', 2010, 'jhoiioju', 'huihiuhiuh', 'uihuihihhiu', 'uihuihiuhih', 0);
+(15, 'kjhkjhkjh', 'khjkhjkhjkhk', 'jkhjkhkhk', 'jkhjkhjkhkj', 'kjhkjhjkh', 0, 'jhoiioju', 'huihiuhiuh', 'uihuihihhiu', 'uihuihiuhih', 0);
 
 -- --------------------------------------------------------
 
@@ -111,7 +108,9 @@ CREATE TABLE `praia` (
 --
 
 INSERT INTO `praia` (`id`, `foto`, `nome`, `local`, `descricao`) VALUES
-(1, 'iojoijoijiojojiojoijo', 'iojiojijijojojj', 'ygopiopioioio', 'iouiouiooijoijuuhuuu');
+(1, 'iojoijoijiojojiojoijo', 'iojiojijijojojj', 'ygopiopioioio', 'iouiouiooijoijuuhuuu'),
+(4, 'https://img.freepik.com/fotos-gratis/bela-praia-tropical-e-mar-com-coqueiro-na-ilha-paradisiaca_74190-2206.jpg', 'Praia Da Lagoinha', 'Ubatuba-Sp', 'É uma praia super tranquila para banhistas'),
+(5, 'https://img.freepik.com/fotos-gratis/bela-praia-tropical-e-mar-com-coqueiro-na-ilha-paradisiaca_74190-2206.jpg', 'Praia Da Lagoinha', 'Ubatuba-Sp', 'É uma praia super tranquila para banhistas');
 
 -- --------------------------------------------------------
 
@@ -242,7 +241,7 @@ ALTER TABLE `jet`
 -- AUTO_INCREMENT de tabela `praia`
 --
 ALTER TABLE `praia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de tabela `products`
