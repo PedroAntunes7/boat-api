@@ -133,7 +133,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-15T17:57:36.715Z",
-    "modified": "2022-06-15T18:00:45.740Z",
+    "modified": "2022-06-22T17:59:12.361Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -157,19 +157,28 @@
     "colId": "history",
     "containerId": "",
     "name": "http://localhost/boat-api/api/praia/delete?id=3",
-    "url": "http://localhost/boat-api/api/praia/delete?id=3",
-    "method": "GET",
+    "url": "http://localhost/boat-api/api/boat/delete",
+    "method": "POST",
     "sortNum": 0,
     "created": "2022-06-20T17:37:43.324Z",
-    "modified": "2022-06-20T17:37:46.824Z",
-    "headers": [],
-    "params": [
+    "modified": "2022-06-22T18:00:00.750Z",
+    "headers": [
       {
-        "name": "id",
-        "value": "3",
-        "isPath": false
+        "name": "Access-Token",
+        "value": "5e1afe787db7ed462895aca5badc7315"
       }
     ],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "id",
+          "value": "15"
+        }
+      ]
+    },
     "tests": []
   },
   {
@@ -177,11 +186,11 @@
     "colId": "history",
     "containerId": "",
     "name": "http://localhost/boat-api/api/praia/delete?id=3",
-    "url": "http://localhost/boat-api/api/praia/delete?id=3",
+    "url": "http://localhost/boat-api/api/boat/delete?id=15",
     "method": "POST",
     "sortNum": 0,
     "created": "2022-06-20T17:37:53.438Z",
-    "modified": "2022-06-20T17:41:38.673Z",
+    "modified": "2022-06-22T17:55:39.878Z",
     "headers": [
       {
         "name": "Access-Token",
@@ -191,7 +200,7 @@
     "params": [
       {
         "name": "id",
-        "value": "3",
+        "value": "15",
         "isPath": false
       }
     ],
