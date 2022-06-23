@@ -59,8 +59,8 @@ class BoatController{
         $response = new Output();
         $response->allowedMethod('POST');
 
-        $auth = new Auth();
-        $user_session = $auth->allowedRole('admin');
+        // $auth = new Auth();
+        // $user_session = $auth->allowedRole('admin');
 
         $id = $_POST['id'];
         $img = $_POST['img'];
@@ -69,7 +69,7 @@ class BoatController{
         $tipo = $_POST['tipo'];
         $estado = $_POST['estado'];
         $ano_fab = $_POST['ano_fab'];
-        $tamamho = $_POST['tamanho'];
+        $tamanho = $_POST['tamanho'];
         $trip = $_POST['trip'];
         $local = $_POST['local'];
         $comb = $_POST['comb'];
