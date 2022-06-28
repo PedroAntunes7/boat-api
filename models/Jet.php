@@ -7,9 +7,8 @@ class Jet{
     public $tipo;
     public $estado;
     public $ano_fab;
-    public $tamanho;
     public $local;
-    function __construct($id, $img, $name, $price, $tipo, $estado, $ano_fab, $tamanho, $local) {
+    function __construct($id, $img, $name, $price, $tipo, $estado, $ano_fab, $local) {
         $this->id = $id;
         $this->img = $img;
         $this->name = $name;
@@ -17,21 +16,19 @@ class Jet{
         $this->tipo = $tipo;
         $this->estado = $estado;
         $this->ano_fab = $ano_fab;
-        $this->tamanho = $tamanho;
         $this->local = $local;
     }
     function create(){
         $db = new Database();
         try {
-            $stmt = $db->conn->prepare("INSERT INTO jet (img, name, price, tipo, estado, ano_fab, tamanho, local)
-            VALUES (:img, :name, :price, :tipo, :estado, :ano_fab, :tamanho, :local);");
+            $stmt = $db->conn->prepare("INSERT INTO jet (img, name, price, tipo, estado, ano_fab, local)
+            VALUES (:img, :name, :price, :tipo, :estado, :ano_fab, :local);");
             $stmt->bindParam(':img', $this->img);
             $stmt->bindParam(':name', $this->name);
             $stmt->bindParam(':price', $this->price);
             $stmt->bindParam(':tipo', $this->tipo);
             $stmt->bindParam(':estado', $this->estado);
             $stmt->bindParam(':ano_fab', $this->ano_fab);
-            $stmt->bindParam(':tamanho',  $this->tamanho);
             $stmt->bindParam(':local', $this->local);
             $stmt->execute();
             $id = $db->conn->lastInsertId();
@@ -58,7 +55,7 @@ class Jet{
     function update(){
         $db = new Database();
         try {
-            $stmt = $db->conn->prepare("UPDATE jet SET img = :img, name = :name, price = :price, tipo = :tipo, estado = :estado, ano_fab = :ano_fab, tamanho = :tamanho, local = :local WHERE id = :id;");
+            $stmt = $db->conn->prepare("UPDATE jet SET img = :img, name = :name, price = :price, tipo = :tipo, estado = :estado, ano_fab = :ano_fab, local = :local WHERE id = :id;");
             $stmt->bindParam(':id', $this->id);
             $stmt->bindParam(':img', $this->img);
             $stmt->bindParam(':name', $this->name);
@@ -66,7 +63,6 @@ class Jet{
             $stmt->bindParam(':tipo', $this->tipo);
             $stmt->bindParam(':estado', $this->estado);
             $stmt->bindParam(':ano_fab', $this->ano_fab);
-            $stmt->bindParam(':tamanho',  $this->tamanho);
             $stmt->bindParam(':local', $this->local);
             $stmt->execute();
             return true;

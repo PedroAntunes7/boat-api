@@ -15,12 +15,11 @@ class JetController{
         $tipo = $_POST['tipo'];
         $estado = $_POST['estado'];
         $ano_fab = $_POST['ano_fab'];
-        $tamanho = $_POST['tamanho'];
         $local = $_POST['local'];
 
         
         //Processamento ou Persistencia
-        $jet = new Jet(null, $img, $name, $price, $tipo, $estado, $ano_fab, $tamanho, $local);
+        $jet = new Jet(null, $img, $name, $price, $tipo, $estado, $ano_fab, $local);
         $id = $jet->create();
         //Saída
         $result['message'] = "Barco Cadastrado com sucesso!";
@@ -31,7 +30,6 @@ class JetController{
         $result['product']['tipo'] = $tipo;
         $result['product']['estado'] = $estado;
         $result['product']['ano_fab'] = $ano_fab;
-        $result['product']['tamanho'] = $tamanho;
         $result['product']['local'] = $local;
         $response->out($result);
     }
@@ -44,7 +42,7 @@ class JetController{
         $user_session = $auth->allowedRole('admin');
 
         $id = $_POST['id'];
-        $jet = new Jet($id, null, null, null, null, null, null, null, null);
+        $jet = new Jet($id, null, null, null, null, null, null, null);
         $jet->delete();
         $result['message'] = "Barco deletado com sucesso!";
         $result['jet']['id'] = $id;
@@ -65,10 +63,8 @@ class JetController{
         $tipo = $_POST['tipo'];
         $estado = $_POST['estado'];
         $ano_fab = $_POST['ano_fab'];
-        $tamamho = $_POST['tamanho'];
-        $trip = $_POST['trip'];
         $local = $_POST['local'];
-        $jet = new Jet($id, $img, $name, $price, $tipo, $estado, $ano_fab, $tamanho, $local);
+        $jet = new Jet($id, $img, $name, $price, $tipo, $estado, $ano_fab, $local);
         $jet->update();
         $result['message'] = "Barco atualizado com sucesso!";
         $result['jet']['id'] = $id;
@@ -80,7 +76,7 @@ class JetController{
     function selectAll(){
         $response = new Output();
         $response->allowedMethod('GET');
-        $jet = new Jet(null, null, null, null, null, null, null, null, null);
+        $jet = new Jet(null, null, null, null, null, null, null, null);
         $result = $jet->selectAll();
         $response->out($result);
     }
@@ -88,7 +84,7 @@ class JetController{
     function destaques(){
         $response = new Output();
         $response->allowedMethod('GET');
-        $jet = new Jet(null, null, null, null, null, null, null, null, null);
+        $jet = new Jet(null, null, null, null, null, null, null, null);
         $result = $jet->selectAll();
         $response->out($result);
     }
@@ -97,7 +93,7 @@ class JetController{
         $response = new Output();
         $response->allowedMethod('GET');
         $id = $_GET['id'];
-        $jet = new Jet($id, null, null, null, null, null, null, null, null);
+        $jet = new Jet($id, null, null, null, null, null, null, null);
         $result = $jet->selectById();
         $response->out($result);
     }
